@@ -10,21 +10,54 @@ using System.Windows.Forms;
 
 namespace image_editor
 {
-    public partial class Form1 : Form
+    public struct CrNewDialogRes
     {
-        public Form1()
+        public int width;
+        public int heidth;
+        public bool ready;
+    }
+    public partial class F_Form1 : Form
+    {
+        public static bool ImageFieldOpened = false;
+        F_draw imageField = null;
+
+        public static ImageEditor imageEditor = new ImageEditor();
+        public static CrNewDialogRes diagRes = new CrNewDialogRes();
+        public F_Form1()
         {
             InitializeComponent();
+            CreateField();
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        
+        private void mb_createNew_Click(object sender, EventArgs e)
         {
-
+            F_CreateNewElementForm createNewElementForm = new F_CreateNewElementForm();
+            createNewElementForm.ShowDialog();
+        }
+        public void CreateField()
+        {
+            imageField = new F_draw();
+            imageField.MdiParent = this;
+            imageField.Show();
+            ImageFieldOpened = true;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void mb_OpenWDraw_Click(object sender, EventArgs e)
         {
+            if (!ImageFieldOpened)
+            {
+                CreateField();
+            }
+        }
 
+        private void mb_CloseWDraw_Click(object sender, EventArgs e)
+        {
+            if (ImageFieldOpened)
+            {
+                imageField.Close();
+                ImageFieldOpened = false;
+            }
         }
     }
 }

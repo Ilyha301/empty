@@ -1,7 +1,7 @@
 ﻿
 namespace image_editor
 {
-    partial class Form1
+    partial class F_Form1
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -41,9 +41,9 @@ namespace image_editor
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,7 +58,7 @@ namespace image_editor
             this.view});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(796, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,20 +75,21 @@ namespace image_editor
             // mb_load
             // 
             this.mb_load.Name = "mb_load";
-            this.mb_load.Size = new System.Drawing.Size(156, 22);
+            this.mb_load.Size = new System.Drawing.Size(180, 22);
             this.mb_load.Text = "Загрузить";
             // 
             // mb_saveAs
             // 
             this.mb_saveAs.Name = "mb_saveAs";
-            this.mb_saveAs.Size = new System.Drawing.Size(156, 22);
+            this.mb_saveAs.Size = new System.Drawing.Size(180, 22);
             this.mb_saveAs.Text = "Сохранить как";
             // 
             // mb_createNew
             // 
             this.mb_createNew.Name = "mb_createNew";
-            this.mb_createNew.Size = new System.Drawing.Size(156, 22);
+            this.mb_createNew.Size = new System.Drawing.Size(180, 22);
             this.mb_createNew.Text = "Создать новый";
+            this.mb_createNew.Click += new System.EventHandler(this.mb_createNew_Click);
             // 
             // view
             // 
@@ -104,12 +105,14 @@ namespace image_editor
             this.mb_OpenWDraw.Name = "mb_OpenWDraw";
             this.mb_OpenWDraw.Size = new System.Drawing.Size(213, 22);
             this.mb_OpenWDraw.Text = "Открыть окно рисования";
+            this.mb_OpenWDraw.Click += new System.EventHandler(this.mb_OpenWDraw_Click);
             // 
             // mb_CloseWDraw
             // 
             this.mb_CloseWDraw.Name = "mb_CloseWDraw";
             this.mb_CloseWDraw.Size = new System.Drawing.Size(213, 22);
             this.mb_CloseWDraw.Text = "Закрыть окно рисования";
+            this.mb_CloseWDraw.Click += new System.EventHandler(this.mb_CloseWDraw_Click);
             // 
             // statusStrip1
             // 
@@ -118,7 +121,7 @@ namespace image_editor
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(796, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -127,7 +130,6 @@ namespace image_editor
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(74, 17);
             this.toolStripStatusLabel1.Text = "Инструмент";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // panel1
             // 
@@ -151,14 +153,12 @@ namespace image_editor
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Кисть";
             // 
-            // panel2
+            // numericUpDown1
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(12, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(74, 22);
-            this.panel2.TabIndex = 3;
+            this.numericUpDown1.Location = new System.Drawing.Point(12, 113);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 5;
             // 
             // label1
             // 
@@ -168,25 +168,27 @@ namespace image_editor
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Цвет";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // numericUpDown1
+            // panel2
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 113);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(12, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(74, 22);
+            this.panel2.TabIndex = 3;
             // 
-            // Form1
+            // F_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(796, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "F_Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

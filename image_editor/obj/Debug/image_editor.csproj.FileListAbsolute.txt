@@ -2,9 +2,11 @@ D:\C++\lust\программы\image_editor\image_editor\bin\Debug\image_editor.
 D:\C++\lust\программы\image_editor\image_editor\bin\Debug\image_editor.exe
 D:\C++\lust\программы\image_editor\image_editor\bin\Debug\image_editor.pdb
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.csprojAssemblyReference.cache
-D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.Form1.resources
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.Properties.Resources.resources
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.csproj.GenerateResource.cache
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.csproj.CoreCompileInputs.cache
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.exe
 D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.pdb
+D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.F_CreateNewElementForm.resources
+D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.F_draw.resources
+D:\C++\lust\программы\image_editor\image_editor\obj\Debug\image_editor.F_Form1.resources
