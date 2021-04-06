@@ -41,9 +41,13 @@ namespace image_editor
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,17 +81,19 @@ namespace image_editor
             this.mb_load.Name = "mb_load";
             this.mb_load.Size = new System.Drawing.Size(180, 22);
             this.mb_load.Text = "Загрузить";
+            this.mb_load.Click += new System.EventHandler(this.mb_load_Click);
             // 
             // mb_saveAs
             // 
             this.mb_saveAs.Name = "mb_saveAs";
             this.mb_saveAs.Size = new System.Drawing.Size(180, 22);
             this.mb_saveAs.Text = "Сохранить как";
+            this.mb_saveAs.Click += new System.EventHandler(this.mb_saveAs_Click);
             // 
             // mb_createNew
             // 
             this.mb_createNew.Name = "mb_createNew";
-            this.mb_createNew.Size = new System.Drawing.Size(180, 22);
+            this.mb_createNew.Size = new System.Drawing.Size(156, 22);
             this.mb_createNew.Text = "Создать новый";
             this.mb_createNew.Click += new System.EventHandler(this.mb_createNew_Click);
             // 
@@ -143,6 +149,7 @@ namespace image_editor
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.panel2);
@@ -153,12 +160,22 @@ namespace image_editor
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Кисть";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Радиус";
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(12, 113);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 5;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label1
             // 
@@ -177,6 +194,11 @@ namespace image_editor
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(74, 22);
             this.panel2.TabIndex = 3;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // F_Form1
             // 
@@ -220,6 +242,10 @@ namespace image_editor
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

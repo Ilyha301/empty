@@ -20,13 +20,17 @@ namespace image_editor
     {
         public static bool ImageFieldOpened = false;
         F_draw imageField = null;
+        Bitmap image = null;
 
         public static ImageEditor imageEditor = new ImageEditor();
         public static CrNewDialogRes diagRes = new CrNewDialogRes();
         public F_Form1()
         {
             InitializeComponent();
+            panel2.BackColor = Color.White;
             CreateField();
+            openFileDialog1.Filter = "All files (*.png; *.jpg; *.jpeg)|*.png; *.jpg; *.jpeg";
+            saveFileDialog1.Filter = "All files (*.png; *.jpg; *.jpeg)|*.png; *.jpg; *.jpeg";
         }
 
         
@@ -34,6 +38,13 @@ namespace image_editor
         {
             F_CreateNewElementForm createNewElementForm = new F_CreateNewElementForm();
             createNewElementForm.ShowDialog();
+            if (diagRes.ready)
+            {
+                imageEditor = new ImageEditor(diagRes.width, diagRes.heidth);
+                imageField.Refresh();
+                panel2.BackColor = Color.White;
+                numericUpDown1.Value = 30;
+            }
         }
         public void CreateField()
         {
@@ -58,6 +69,37 @@ namespace image_editor
                 imageField.Close();
                 ImageFieldOpened = false;
             }
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                panel2.BackColor = colorDialog1.Color;
+                imageEditor.SetBrushColor(colorDialog1.Color);
+            }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            imageEditor.SetBrushRadius(Convert.ToInt32(numericUpDown1.Value));
+        }
+
+
+
+        private void mb_load_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog1.FileName;
+                imageEditor.LoadImage(filePath);
+                imageField.Refresh();
+            }
+        }
+
+        private void mb_saveAs_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

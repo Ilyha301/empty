@@ -17,9 +17,17 @@ namespace image_editor
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void b_ok_Click(object sender, EventArgs e)
         {
+            F_Form1.diagRes.width = Convert.ToInt32(num_widht.Value);
+            F_Form1.diagRes.heidth = Convert.ToInt32(num_heigh.Value);
+            F_Form1.diagRes.ready = true;
+            this.Close();
+        }
 
+        private void b_otmen_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

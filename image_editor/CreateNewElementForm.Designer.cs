@@ -47,7 +47,6 @@ namespace image_editor
             this.lb_widht.Size = new System.Drawing.Size(46, 13);
             this.lb_widht.TabIndex = 0;
             this.lb_widht.Text = "Ширина";
-            this.lb_widht.Click += new System.EventHandler(this.label1_Click);
             // 
             // lb_heigh
             // 
@@ -66,6 +65,7 @@ namespace image_editor
             this.b_ok.TabIndex = 2;
             this.b_ok.Text = "ОК";
             this.b_ok.UseVisualStyleBackColor = true;
+            this.b_ok.Click += new System.EventHandler(this.b_ok_Click);
             // 
             // b_otmen
             // 
@@ -75,20 +75,51 @@ namespace image_editor
             this.b_otmen.TabIndex = 3;
             this.b_otmen.Text = "Отмена";
             this.b_otmen.UseVisualStyleBackColor = true;
+            this.b_otmen.Click += new System.EventHandler(this.b_otmen_Click);
             // 
             // num_widht
             // 
             this.num_widht.Location = new System.Drawing.Point(35, 52);
+            this.num_widht.Maximum = new decimal(new int[] {
+            1500,
+            0,
+            0,
+            0});
+            this.num_widht.Minimum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.num_widht.Name = "num_widht";
             this.num_widht.Size = new System.Drawing.Size(120, 20);
             this.num_widht.TabIndex = 4;
+            this.num_widht.Value = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             // 
             // num_heigh
             // 
             this.num_heigh.Location = new System.Drawing.Point(161, 52);
+            this.num_heigh.Maximum = new decimal(new int[] {
+            1500,
+            0,
+            0,
+            0});
+            this.num_heigh.Minimum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.num_heigh.Name = "num_heigh";
             this.num_heigh.Size = new System.Drawing.Size(120, 20);
             this.num_heigh.TabIndex = 5;
+            this.num_heigh.Value = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             // 
             // F_CreateNewElementForm
             // 

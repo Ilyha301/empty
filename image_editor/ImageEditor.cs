@@ -40,5 +40,18 @@ namespace image_editor
             }
             brushRadius = 30;
         }
+        public void SetBrushColor(Color color)
+        {
+            brushColor = color;
+        }
+        public void SetBrushRadius(int radius)
+        {
+            brushRadius = radius;
+        }
+
+        public void LoadImage(string ImagePath)
+        {
+            image = new Bitmap(ImagePath);
+        }
     }
 }
