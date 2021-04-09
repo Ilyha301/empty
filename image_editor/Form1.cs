@@ -73,10 +73,10 @@ namespace image_editor
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            if (colorDialog2.ShowDialog() == DialogResult.OK)
             {
-                panel2.BackColor = colorDialog1.Color;
-                imageEditor.SetBrushColor(colorDialog1.Color);
+                panel2.BackColor = colorDialog2.Color;
+                imageEditor.SetBrushColor(colorDialog2.Color);
             }
         }
 
@@ -99,7 +99,11 @@ namespace image_editor
 
         private void mb_saveAs_Click(object sender, EventArgs e)
         {
-            
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog1.FileName;
+                imageField.savePbImage(saveFileDialog1.FileName);
+            }
         }
     }
 }

@@ -29,33 +29,15 @@ namespace image_editor
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb_x = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textb_x = new System.Windows.Forms.TextBox();
             this.textb_y = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lb_x
-            // 
-            this.lb_x.AutoSize = true;
-            this.lb_x.Location = new System.Drawing.Point(55, 67);
-            this.lb_x.Name = "lb_x";
-            this.lb_x.Size = new System.Drawing.Size(14, 13);
-            this.lb_x.TabIndex = 0;
-            this.lb_x.Text = "X";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Y";
             // 
             // panel2
             // 
@@ -77,9 +59,13 @@ namespace image_editor
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(673, 447);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // textb_x
             // 
@@ -95,6 +81,10 @@ namespace image_editor
             this.textb_y.Size = new System.Drawing.Size(100, 20);
             this.textb_y.TabIndex = 5;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // F_draw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,8 +93,6 @@ namespace image_editor
             this.Controls.Add(this.textb_y);
             this.Controls.Add(this.textb_x);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lb_x);
             this.Name = "F_draw";
             this.Text = "draw";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.F_draw_FormClosed);
@@ -117,12 +105,10 @@ namespace image_editor
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lb_x;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textb_x;
         private System.Windows.Forms.TextBox textb_y;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

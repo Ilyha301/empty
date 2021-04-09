@@ -45,9 +45,9 @@ namespace image_editor
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,14 +79,14 @@ namespace image_editor
             // mb_load
             // 
             this.mb_load.Name = "mb_load";
-            this.mb_load.Size = new System.Drawing.Size(180, 22);
+            this.mb_load.Size = new System.Drawing.Size(156, 22);
             this.mb_load.Text = "Загрузить";
             this.mb_load.Click += new System.EventHandler(this.mb_load_Click);
             // 
             // mb_saveAs
             // 
             this.mb_saveAs.Name = "mb_saveAs";
-            this.mb_saveAs.Size = new System.Drawing.Size(180, 22);
+            this.mb_saveAs.Size = new System.Drawing.Size(156, 22);
             this.mb_saveAs.Text = "Сохранить как";
             this.mb_saveAs.Click += new System.EventHandler(this.mb_saveAs_Click);
             // 
@@ -243,9 +243,9 @@ namespace image_editor
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }
 
